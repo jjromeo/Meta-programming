@@ -8,7 +8,6 @@ describe Student do
 
     it "can have badges awarded" do 
         student.award :unixoid
-        puts student.awards.inspect
         expect(student).to have_unixoid
     end
 end

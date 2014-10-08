@@ -16,14 +16,12 @@ class Student
 			self.class.send(:define_method,  method.to_s) {
 					@awards.include? "#{method.to_s}"[4..-2]
 			}
-			self.send(method)
 		else
 			self.class.send(:define_method, method.to_s){ 
-				self.awards << args.join
-
+				@awards << args.join
 			}
 		end
-		# "The method #{method} doesn't exist, stop making them up!"
+		self.send(method)
 	end
 
 
