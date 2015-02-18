@@ -1,1 +1,3 @@
 Learning metaprogramming
+
+including method_missing and define_method
